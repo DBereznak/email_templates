@@ -5,3 +5,8 @@
  background-color: #d4d4d4;
  border-top: 2px solid #acacac;    
 }
+
+.footer h2{
+    width: 100%;
+    text-align: center;
+}
