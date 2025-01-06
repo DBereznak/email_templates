@@ -10,11 +10,12 @@ import { EmailDataContext } from "./context/emailDataContext";
 
 export default function Home() {
   const [name, setName] = useState("Angela")
+  const [title, setTitle] = useState("Title Goes Here")
   return (
     <div className={styles.page}>
       <Header/>
       <main className={styles.main}>
-        <EmailDataContext.Provider value={{name, setName}}>
+        <EmailDataContext.Provider value={{name, title, setName, setTitle}}>
         <EmailData />
         <TemplateViewer />
         </EmailDataContext.Provider>

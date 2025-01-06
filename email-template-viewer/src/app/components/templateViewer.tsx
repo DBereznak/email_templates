@@ -6,10 +6,8 @@ import { EmailDataContext } from "../context/emailDataContext";
 
 export default function TemplateViewer() {
     const name = useContext(EmailDataContext);
-    const emailTemplates = emailMarkup(name.name);
+    const emailTemplates = emailMarkup(name!.name, name!.title);
     const templates = emailTemplates.map(template => <div key={template.id}> <EmailTemplate rawHTML={template.email} /> </div>)
-    
-    console.log(name.name);
     
     return (
         <div className={styles.viewer}>
