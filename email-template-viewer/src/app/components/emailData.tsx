@@ -3,7 +3,7 @@ import styles from "./emailData.module.css";
 import { EmailDataContext, emailDataType } from "../context/emailDataContext"; 
 
 export default function EmailData() {
-    const {name, title, setName, setTitle} = useContext(EmailDataContext);
+    const {name, title, body, setName, setTitle, setBody} = useContext(EmailDataContext);
     return (
         <div className={styles.emailForm}>
             <h1>Email Data</h1>
@@ -18,6 +18,11 @@ export default function EmailData() {
         type="text" 
         value={title} 
         onChange={(e) => setTitle(e.target.value)} 
+      />
+      <h2>Body</h2>
+      <textarea  
+        value={body} 
+        onChange={(e) => setBody(e.target.value)} 
       />
         </div>
     )

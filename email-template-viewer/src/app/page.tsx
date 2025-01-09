@@ -9,13 +9,14 @@ import styles from "./page.module.css";
 import { EmailDataContext } from "./context/emailDataContext";
 
 export default function Home() {
-  const [name, setName] = useState("Angela")
-  const [title, setTitle] = useState("Title Goes Here")
+  const [name, setName] = useState("Angela");
+  const [title, setTitle] = useState("Title Goes Here");
+  const [body, setBody] = useState("Body goes here");
   return (
     <div className={styles.page}>
       <Header/>
       <main className={styles.main}>
-        <EmailDataContext.Provider value={{name, title, setName, setTitle}}>
+        <EmailDataContext.Provider value={{name, title, body, setName, setTitle, setBody}}>
         <EmailData />
         <TemplateViewer />
         </EmailDataContext.Provider>
